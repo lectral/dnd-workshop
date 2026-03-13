@@ -1,6 +1,5 @@
 .build
 workspace/
-.agents/skills/dnd-storymancer/
 .agents/skills/dnd-storymancer/assets/books/book1.md
 .agents/skills/dnd-storymancer/assets/books/book2.md
 .agents/skills/dnd-storymancer/assets/books/book3.md
