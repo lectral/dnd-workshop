@@ -4,19 +4,6 @@
   <img src="assets/d20.svg" alt="D20 dice icon" width="220" />
 
  # DM Copilot Skills
-
-<div align="center">
-  <img src="assets/d20.svg" alt="D20 dice icon" width="220" />
-
-  ## My Dungeon Master Toolkit
-</div>
-
-# DM Copilot Skills
-
-<div align="center">
-  <img src="assets/d20.svg" alt="D20 dice icon" width="220" />
-
-  ## My Dungeon Master Toolkit
 </div>
 
 ## Why I built this
