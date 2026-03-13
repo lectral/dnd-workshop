@@ -1,2 +1,0 @@
-- restart.sh runs with `set -Eeuo pipefail`; initialize optional vars like `DEFAULT_BRANCH` before testing them directly.
-- For default branch detection, prefer `origin/HEAD` symbolic-ref, then current branch, then `main` fallback.
