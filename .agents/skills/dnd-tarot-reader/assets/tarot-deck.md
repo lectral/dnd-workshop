@@ -1,0 +1,118 @@
+# Dungeons & Dragons Tarot
+This file provides an adapted deck list for campaign inspiration. It preserves classic tarot structure while using original wording for meanings and adventure hooks.
+
+## The Major Arcana
+
+The Major Arcana represents archetypal life lessons and enduring transformations.
+
+| Card Name | Classic Tarot Card | Meaning | Adventure Seed |
+| :--- | :--- | :--- | :--- |
+| **The Fool** | The Fool | A leap of faith, curiosity, and brave inexperience open a new road. In classic tarot, this card marks innocent beginnings, risk, and trusting the journey before certainty exists. | A cheerful tinkerer insists a hidden wonder waits if the party follows his odd trail signs. |
+| **The Magician** | The Magician | Skill and will align when you use every tool already in reach. Traditionally, The Magician signals focused intention, mastery of resources, and turning potential into concrete action. | An eccentric scholar hands over a rune key that can open one impossible lock. |
+| **The High Priestess** | The High Priestess | Quiet intuition reveals truths logic alone cannot touch. In classic meaning, she represents hidden knowledge, inner wisdom, mystery, and listening to what is not spoken aloud. | A veiled oracle offers each hero a private blessing tied to a coming test. |
+| **The Empress** | The Empress | Creation, care, and abundance become power when nurtured with intent. The traditional Empress embodies fertility, growth, comfort, beauty, and life sustained through generosity. | A sovereign known for mercy asks the party to protect a fragile peace mission. |
+| **The Emperor** | The Emperor | Order, structure, and authority demand responsible leadership. In classic tarot he stands for law, stability, boundaries, and the duty to rule with discipline rather than impulse. | A distant ruler summons the party to stabilize a border city in open unrest. |
+| **The Hierophant** | The Hierophant | Tradition and sacred teaching can guide or bind, depending on use. Classical readings emphasize institutions, ritual, orthodoxy, and learning from established spiritual frameworks. | An old liturgy text hides a coded directive that points to a forgotten shrine. |
+| **The Lovers** | The Lovers | Choice, values, and devotion define what kind of bond will endure. In classic tarot this card concerns union, alignment, intimacy, and decisions made from core principles. | A masked envoy offers a tempting alliance that conflicts with the party's principles. |
+| **The Chariot** | The Chariot | Disciplined momentum overcomes chaos and carries intent into action. Traditionally it means control, victory through willpower, and directing opposing forces toward one purpose. | A bound fire spirit offers one year of service if the party can break its prison lawfully. |
+| **Strength** | Strength | Courage and compassion tame fear better than force alone. In classic interpretation, Strength is patient inner power, moral bravery, and mastery through calm restraint. | A famed pit-fighter blocks a gate and accepts passage only after an honor duel. |
+| **The Hermit** | The Hermit | Solitude and reflection reveal the light needed for the next step. Classical tarot frames this as introspection, guidance, withdrawal for wisdom, and searching for truth within. | A reclusive ascetic seeks capable allies to end a nightmare beast haunting pilgrims. |
+| **The Wheel of Fortune** | The Wheel of Fortune | Fate turns suddenly; adaptability decides whether the turn helps or harms. Traditional meaning centers on cycles, luck, destiny, and the inevitability of change. | A lucky wanderer grants a one-use charm that bends chance at a critical moment. |
+| **Justice** | Justice | Consequences, truth, and balance demand clear-eyed accountability. In classic tarot, Justice concerns fairness, ethics, cause and effect, and decisions grounded in evidence. | A laborer asks for aid against a cruel magistrate and offers a family relic as payment. |
+| **The Hanged Man** | The Hanged Man | Progress arrives through surrender, patience, and a reversed perspective. Traditionally this card asks for pause, sacrifice, and reframing to gain insight before acting. | After a bizarre dream-conversation with a sewer horror, one hero awakens with lasting insight. |
+| **Death** | Death | Endings clear the ground so a truer form of life can begin. In classic tarot, Death signals transformation, release, and irreversible transition rather than literal mortality. | A nightbound noble offers immortality in exchange for a single deed. |
+| **Temperance** | Temperance | Measured action, patience, and harmony create lasting results. Traditional readings stress moderation, integration, healing, and combining opposites into sustainable balance. | A temple rite grants the party steady composure for several coming trials. |
+| **The Devil** | The Devil | Attachment and self-deception tighten chains unless named honestly. In classic meaning, this card points to bondage, temptation, addiction, and illusions of power. | A smiling fiend proposes a profitable bargain with one hidden cost. |
+| **The Tower** | The Tower | Sudden collapse destroys false stability and forces urgent truth. Classical tarot sees this as upheaval, revelation, and liberation through the breakdown of fragile structures. | Violent tremors split the district, exposing buried chambers and old oaths. |
+| **The Star** | The Star | Hope, renewal, and clear guidance return after hardship. In traditional interpretation, The Star brings faith, inspiration, healing, and trust in a brighter direction. | The party finds a brass automaton that unfailingly walks toward sanctuary and rumor. |
+| **The Moon** | The Moon | Uncertainty, illusion, and fear ask for intuition over certainty. Classic tarot links this card to dreams, anxiety, ambiguity, and hidden motives beneath appearances. | A crystal seer invites the party to witness a vision that may be warning or trap. |
+| **The Sun** | The Sun | Vitality, joy, and plain truth burn away pretense. Traditionally, The Sun represents success, confidence, clarity, warmth, and life-giving momentum. | A dawn anomaly changes each hero's apparent age for three days, with odd social effects. |
+| **Judgment** | Judgment | Reckoning and awakening call for honest evaluation and decisive renewal. Classical meaning emphasizes calling, absolution, accountability, and rising into a transformed purpose. | Inside a sleeping giant's satchel, a captive voice begs for rescue before sunset. |
+| **The World** | The World | Completion, integration, and earned wholeness mark a major cycle's end. In traditional tarot this card means fulfillment, totality, and stepping into the next stage from mastery. | A traveler weeps beside the road, facing a forced union that could ignite local conflict. |
+
+---
+
+## The Minor Arcana
+
+The Minor Arcana represents shifting daily forces and practical turns of fate. In this adapted deck, suits are renamed while preserving tarot correspondences:
+
+* **Suit of Vigor** (maps to Wands): physical drive, bold action, and creative fire.
+* **Suit of Reason** (maps to Swords): thought, conflict, analysis, and hard clarity.
+* **Suit of Insight** (maps to Cups): emotion, intuition, memory, and relational truth.
+* **Suit of Presence** (maps to Pentacles): resources, influence, labor, and material outcomes.
+
+### Suit of Vigor (Wands)
+
+| Card Name | Classic Tarot Card | Meaning | Adventure Seed |
+| :--- | :--- | :--- | :--- |
+| **Ace of Vigor** | Ace of Wands | A spark of purpose arrives; begin before doubt cools it. The classic Ace of Wands signals ignition, inspiration, and raw creative force ready for bold action. | A lord's heirs vanish into a notorious carnival, and the family offers reward for their return. |
+| **Two of Vigor** | Two of Wands | Planning and ambition widen the horizon beyond the familiar. Traditionally this card marks strategic vision, future planning, and stepping beyond safety. | A street drunk swears the prince becomes a beast at moonrise, while new killings spread panic. |
+| **Three of Vigor** | Three of Wands | Expansion follows committed effort and clear signals to allies. In classic tarot, this means progress, foresight, and seeing early results from risk already taken. | A novice knight confesses his order stole a relic from hobgoblins and begs help to return it. |
+| **Four of Vigor** | Four of Wands | Community and shared labor create stable celebration. The classic meaning emphasizes homecoming, harmony, milestones, and support from trusted people. | A mayor labels tieflings a moral threat and orders mass detention unless stopped. |
+| **Five of Vigor** | Five of Wands | Friction can become growth when rivalry is directed, not denied. Traditionally this card reflects competition, clashing agendas, and productive struggle. | A showmaster mourns his dead giant spider and pleads for viable eggs from the wilds. |
+| **Six of Vigor** | Six of Wands | Recognition arrives, but humility keeps victory useful. In classic reading, this is success, acclaim, and public validation after hard effort. | Elders ask the party to mentor a youth through a perilous rite of passage. |
+| **Seven of Vigor** | Seven of Wands | Hold your ground under pressure without losing your center. Traditionally it means defending position, resilience under attack, and moral backbone. | A found blade is enchanted: sometimes merely keen, sometimes loudly singing when drawn. |
+| **Eight of Vigor** | Eight of Wands | Events accelerate; adapt quickly and act with precision. The classic meaning is rapid movement, swift messages, and momentum that cannot be delayed. | During a storm, lightning reveals a cave mouth that leads to a hidden hag enclave. |
+| **Nine of Vigor** | Nine of Wands | Resilience is tested one more time before relief. Traditionally this card shows endurance, guarded courage, and readiness despite exhaustion. | Blight from a cursed manor spreads through valley farms, and villagers pool coin for help. |
+| **Ten of Vigor** | Ten of Wands | Burden grows heavy; delegation and honesty prevent collapse. In classic tarot, this card warns of overload, duty, and strain from carrying too much alone. | Druids ask for their sacred stone back from a vain monarch who wears it in his crown. |
+| **Scout of Vigor** | Page of Wands | Curiosity and daring launch a fresh chapter of action. Traditionally this page brings messages of adventure, enthusiasm, and new creative paths. | Corrupt clerics hire the party to reclaim a holy relic that a true saint took for safekeeping. |
+| **Rider of Vigor** | Knight of Wands | Bold momentum can win fast if recklessness is managed. The classic knight represents passion, speed, charisma, and volatile daring. | The party finds a sending stone connected to a desperate stranger begging immediate rescue. |
+| **Matron of Vigor** | Queen of Wands | Warm leadership inspires others to act with confidence. Traditionally she symbolizes courage, magnetism, independent spirit, and protective fire. | A high-profile envoy needs escort across territory claimed by raiders and beasts. |
+| **Sovereign of Vigor** | King of Wands | Vision matures into decisive leadership and shared purpose. In classic reading, this king embodies command, entrepreneurship, and strategic creative authority. | Travelers uncover a yuan-ti brood preparing to enslave a nearby settlement. |
+
+### Suit of Reason (Swords)
+
+| Card Name | Classic Tarot Card | Meaning | Adventure Seed |
+| :--- | :--- | :--- | :--- |
+| **Ace of Reason** | Ace of Swords | Clarity cuts through confusion and starts a new line of thought. The classic Ace of Swords marks truth, mental breakthrough, and decisive intellectual power. | A renowned arcanist grants one truthful answer to a single carefully chosen question. |
+| **Two of Reason** | Two of Swords | Stalemate and uncertainty demand a difficult but honest decision. Traditionally this card points to denial, suspended judgment, and the need to choose. | A rune-carved lever hums with dormant power, waiting for someone to pull it. |
+| **Three of Reason** | Three of Swords | Pain teaches when faced directly and integrated with care. In classic meaning, it reflects sorrow, heartbreak, and painful truth that must be acknowledged. | A grieving dryad asks the party to stop loggers and raiders destroying her sacred grove. |
+| **Four of Reason** | Four of Swords | Rest and stillness restore judgment before the next push. Traditionally it is retreat, recovery, contemplation, and strategic pause after conflict. | The next short rest taken under a moonlit shrine grants the full benefit of a long rest. |
+| **Five of Reason** | Five of Swords | Winning at any cost breeds hollow conflict and lingering resentment. The classic reading warns of ego battles, humiliation, and pyrrhic victories. | Two nobles feud over a cursed heirloom and both try to hire the party first. |
+| **Six of Reason** | Six of Swords | Passage away from turmoil opens the way to recovery. Traditionally this card means transition, leaving hardship behind, and difficult but necessary movement. | A ghost claiming kinship pleads for help avenging a betrayal that ended its life. |
+| **Seven of Reason** | Seven of Swords | Strategy, secrecy, and misdirection test trust. Classic tarot ties it to stealth, deception, cunning plans, and acting outside open confrontation. | A shapechanger has replaced a court advisor; the crown seeks discreet investigators. |
+| **Eight of Reason** | Eight of Swords | Limitation is often part prison, part belief that can be challenged. Traditionally it reflects restriction, self-doubt, and perceived traps. | A nearby town under drow pressure begs for relief before its defenders break. |
+| **Nine of Reason** | Nine of Swords | Anxiety magnifies in silence; naming fear reduces its hold. In classic reading, this card represents worry, dread, guilt, and sleepless mental torment. | A mind flayer uses stolen authority inside the prison to harvest victims unnoticed. |
+| **Ten of Reason** | Ten of Swords | A hard ending forces acceptance and clears space for truth. Traditionally this means collapse, betrayal, and finality that precedes eventual renewal. | The mayor vanishes after falling under vampiric influence, leaving the town leaderless. |
+| **Scout of Reason** | Page of Swords | Alert curiosity and new ideas seek practical expression. The classic page signals vigilance, inquiry, messages, and sharp but youthful perception. | A mage patron hires the party to retrieve dangerous components before rivals do. |
+| **Rider of Reason** | Knight of Swords | Focused drive can break deadlock when guided by discipline. Traditionally this knight is swift, forceful, and intellectually relentless, sometimes to a fault. | A militant order asks for aid sanctifying a battlefield tainted by fiendish rites. |
+| **Matron of Reason** | Queen of Swords | Honest speech and clear boundaries create wise action. In classic tarot she stands for discernment, integrity, and compassionate but unsentimental clarity. | A distraught patron presents a layered murder case and fears the killer is protected. |
+| **Sovereign of Reason** | King of Swords | Authority and intellect work best when balanced with conscience. Traditionally this king represents ethical judgment, lawful order, and strategic command. | A queen suffers under an old hex, and court factions race to control the cure. |
+
+### Suit of Insight (Cups)
+
+| Card Name | Classic Tarot Card | Meaning | Adventure Seed |
+| :--- | :--- | :--- | :--- |
+| **Ace of Insight** | Ace of Cups | Emotional renewal and empathy overflow into meaningful connection. The classic Ace of Cups represents love, spiritual opening, and the start of heartfelt flow. | Elven envoys ask the party to recover a consecrated relic before a rival cult claims it. |
+| **Two of Insight** | Two of Cups | Partnership forms through mutual respect and clear consent. Traditionally, this card means attraction, balanced union, and agreements built on reciprocity. | The watch commander asks for help capturing a fugitive who always escapes legal nets. |
+| **Three of Insight** | Three of Cups | Shared joy and fellowship strengthen morale and trust. The classic meaning highlights celebration, friendship, and communal support. | The mayor invites the party to a strange civic festival where monsters are honored, not hunted. |
+| **Four of Insight** | Four of Cups | Withdrawal can reveal hidden options if apathy is challenged. Traditionally this card points to contemplation, emotional stagnation, and overlooked gifts. | A carved box in an old tree contains a partial map to an unclaimed vault. |
+| **Five of Insight** | Five of Cups | Grief is real, but not all hope has been lost. In classic tarot, this card reflects mourning, regret, and the need to notice what remains. | A revenant seeks help finishing its final vow before it can rest. |
+| **Six of Insight** | Six of Cups | Memory and innocence can heal when revisited with wisdom. Traditionally this means nostalgia, kindness, past ties, and restorative simplicity. | A crystal shard pulses when aimed at a far peak, suggesting a buried signal or beacon. |
+| **Seven of Insight** | Seven of Cups | Many alluring paths appear; discernment matters more than desire. The classic meaning includes fantasy, temptation, options, and confusion from excess choice. | A scholar uncovers a glyph-sealed stone door beneath the library stacks. |
+| **Eight of Insight** | Eight of Cups | Leaving what no longer sustains you opens space for growth. Traditionally this card marks voluntary departure, emotional maturity, and searching for deeper purpose. | Cemetery graves are opened from within, and townsfolk fear the dead now walk. |
+| **Nine of Insight** | Nine of Cups | Satisfaction grows when gratitude tempers appetite. In classic reading, this is fulfillment, pleasure, and wishes granted with mindful contentment. | Raiders march toward a small village, which asks the party to organize its defense. |
+| **Ten of Insight** | Ten of Cups | Lasting harmony comes from aligned hearts, homes, and hopes. Traditionally this card signifies emotional completion, family joy, and enduring peace. | Within a ring of standing stones, a stable portal flickers open at twilight. |
+| **Scout of Insight** | Page of Cups | Imagination and sensitivity invite unexpected beginnings. The classic page brings intuitive messages, creative stirrings, and gentle emotional curiosity. | A dying sailor presses a silver key into a hero's hand and whispers, "Find the fish." |
+| **Rider of Insight** | Knight of Cups | Idealism and heartfelt pursuit move events with emotional force. Traditionally this knight represents romance, devotion, and mission driven by feeling and ideals. | Rumors claim the mayor signed an infernal pact, and witnesses keep disappearing. |
+| **Matron of Insight** | Queen of Cups | Compassion and calm perception steady turbulent situations. The classic queen embodies empathy, intuition, nurturing depth, and emotional intelligence. | A talking duck insists it witnessed a murder and demands official justice. |
+| **Sovereign of Insight** | King of Cups | Emotional mastery supports mercy without losing authority. Traditionally this king means mature compassion, diplomacy, and steady leadership in emotional storms. | A noble confesses an assassin is coming and asks for discreet protection. |
+
+### Suit of Presence (Pentacles)
+
+| Card Name | Classic Tarot Card | Meaning | Adventure Seed |
+| :--- | :--- | :--- | :--- |
+| **Ace of Presence** | Ace of Pentacles | A concrete opportunity appears; plant it carefully for lasting gain. The classic Ace of Pentacles signifies material beginnings, prosperity, and practical potential. | A covert killers' guild marks one party member and begins escalating attempts. |
+| **Two of Presence** | Two of Pentacles | Balance, timing, and priorities keep pressure manageable. Traditionally this card means juggling demands, adaptation, and dynamic equilibrium. | Longboat raiders claim they found a route to the Styx and seek allies for a hellbound raid. |
+| **Three of Presence** | Three of Pentacles | Skilled teamwork turns separate talents into real craft. In classic reading, this card highlights collaboration, craftsmanship, and recognized competence. | A timid ogre asks help rescuing his pet goat from a cruel cyclops. |
+| **Four of Presence** | Four of Pentacles | Protect resources wisely without letting fear become hoarding. Traditionally it concerns control, security, possessiveness, and fear of loss. | A miner finds mithral but loses the shaft to monsters and asks for reclamation support. |
+| **Five of Presence** | Five of Pentacles | Scarcity tests spirit; aid and resilience prevent despair. The classic meaning is hardship, exclusion, and survival through mutual support. | A kobold guide offers to lead the party to a legendary draconic relic in frozen peaks. |
+| **Six of Presence** | Six of Pentacles | Generosity and reciprocity should remain fair and sustainable. Traditionally this card concerns giving, receiving, patronage, and ethical distribution of resources. | A retired sailor shares exact coordinates for a famous wreck, for a cut of salvage. |
+| **Seven of Presence** | Seven of Pentacles | Patience and long-view planning mature uncertain investments. The classic reading emphasizes assessment, delayed reward, and tending what was planted. | Rumors say the mayor is possessed, while secret preparations for a mass sacrifice continue. |
+| **Eight of Presence** | Eight of Pentacles | Mastery comes from repetition, detail, and disciplined effort. Traditionally this card means apprenticeship, diligence, and steady improvement through work. | A dwarven smith's rune hammer is stolen; she offers custom forging for its return. |
+| **Nine of Presence** | Nine of Pentacles | Self-sufficiency and earned comfort invite appreciation over excess. In classic meaning, this card marks independence, refinement, and cultivated abundance. | Strange tunneling undermines city foundations, and officials hire the party to trace the source. |
+| **Ten of Presence** | Ten of Pentacles | Legacy and shared prosperity depend on trusted networks. Traditionally it represents inheritance, multigenerational wealth, and enduring communal foundations. | A paladin asks help recovering a fallen comrade's remains from contested ground. |
+| **Scout of Presence** | Page of Pentacles | Practical curiosity opens a path to new capability. The classic page signals study, opportunity, and grounded ambition at an early stage. | A vital rope bridge is destroyed overnight, and villagers beg for rapid repair and protection. |
+| **Rider of Presence** | Knight of Pentacles | Reliable effort and duty carry hard tasks to completion. Traditionally this knight represents patience, consistency, and methodical progress. | A reclusive wizard pays well for live basilisk or cockatrice eggs. |
+| **Matron of Presence** | Queen of Pentacles | Stewardship and care create stable abundance for many. In classic tarot she embodies practicality, generosity, comfort, and resourceful nurture. | A farmer claims a cyclops stole her goose that lays gilded eggs. |
+| **Sovereign of Presence** | King of Pentacles | Mature prosperity combines command, generosity, and restraint. Traditionally this king stands for wealth, stewardship, reliability, and long-term material success. | A royal gala lacks its performers, and the court urgently seeks replacement talent. |

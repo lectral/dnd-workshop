@@ -1,0 +1,25 @@
+<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="D20 dice icon">
+  <defs>
+    <linearGradient id="faceGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </linearGradient>
+    <linearGradient id="edgeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <polygon points="110,12 198,72 165,182 55,182 22,72" fill="url(#faceGrad)" stroke="url(#edgeGrad)" stroke-width="6" filter="url(#shadow)" />
+
+  <polyline points="110,12 110,92 22,72" stroke="#1e3a8a" stroke-width="3" fill="none" />
+  <polyline points="110,12 110,92 198,72" stroke="#1e3a8a" stroke-width="3" fill="none" />
+  <polyline points="55,182 110,92 165,182" stroke="#1e3a8a" stroke-width="3" fill="none" />
+  <polyline points="22,72 110,92 55,182" stroke="#1e3a8a" stroke-width="3" fill="none" />
+  <polyline points="198,72 110,92 165,182" stroke="#1e3a8a" stroke-width="3" fill="none" />
+
+  <text x="110" y="107" text-anchor="middle" font-size="34" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-weight="700" fill="#0f172a">20</text>
+</svg>
