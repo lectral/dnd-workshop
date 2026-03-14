@@ -5,3 +5,4 @@ workspace/
 .agents/skills/dnd-storymancer/assets/books/book3.md
 .agents/skills/polish-language/
 restart.sh
+to_vault.sh

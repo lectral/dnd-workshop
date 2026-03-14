@@ -1,0 +1,960 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "note": "Weighted tables used by randomize.js. Each option is { value, weight }. Higher weight = more probable. Tier 1 = above average, Tier 2 = baseline, Tier 3 = below average.",
+    "tier_modifiers": {
+      "1": "Boost powerful/complex options. Increase weights on high-end entries.",
+      "2": "Use base weights as-is.",
+      "3": "Penalize powerful options. Decrease weights on high-end entries."
+    }
+  },
+
+  "statblock": {
+    "_note": "Properties are resolved per CR band, then modified by tier. CR bands: low=0-4, mid=5-10, high=11-16, epic=17+",
+    "cr_bands": {
+      "low":  [0, 4],
+      "mid":  [5, 10],
+      "high": [11, 16],
+      "epic": [17, 30]
+    },
+    "size": {
+      "low":  [
+        { "value": "Tiny",       "weight": 5 },
+        { "value": "Small",      "weight": 15 },
+        { "value": "Medium",     "weight": 50 },
+        { "value": "Large",      "weight": 25 },
+        { "value": "Huge",       "weight": 4 },
+        { "value": "Gargantuan", "weight": 1 }
+      ],
+      "mid":  [
+        { "value": "Small",      "weight": 5 },
+        { "value": "Medium",     "weight": 35 },
+        { "value": "Large",      "weight": 40 },
+        { "value": "Huge",       "weight": 15 },
+        { "value": "Gargantuan", "weight": 5 }
+      ],
+      "high": [
+        { "value": "Medium",     "weight": 20 },
+        { "value": "Large",      "weight": 35 },
+        { "value": "Huge",       "weight": 35 },
+        { "value": "Gargantuan", "weight": 10 }
+      ],
+      "epic": [
+        { "value": "Large",      "weight": 10 },
+        { "value": "Huge",       "weight": 40 },
+        { "value": "Gargantuan", "weight": 50 }
+      ]
+    },
+    "attacks": {
+      "low":  [
+        { "value": 1, "weight": 60 },
+        { "value": 2, "weight": 30 },
+        { "value": 3, "weight": 8 },
+        { "value": 4, "weight": 2 }
+      ],
+      "mid":  [
+        { "value": 1, "weight": 15 },
+        { "value": 2, "weight": 50 },
+        { "value": 3, "weight": 25 },
+        { "value": 4, "weight": 8 },
+        { "value": 5, "weight": 2 }
+      ],
+      "high": [
+        { "value": 2, "weight": 20 },
+        { "value": 3, "weight": 40 },
+        { "value": 4, "weight": 30 },
+        { "value": 5, "weight": 10 }
+      ],
+      "epic": [
+        { "value": 3, "weight": 20 },
+        { "value": 4, "weight": 40 },
+        { "value": 5, "weight": 30 },
+        { "value": 6, "weight": 10 }
+      ]
+    },
+    "damage_type": [
+      { "value": "slashing",    "weight": 15 },
+      { "value": "piercing",    "weight": 15 },
+      { "value": "bludgeoning", "weight": 15 },
+      { "value": "fire",        "weight": 10 },
+      { "value": "cold",        "weight": 8 },
+      { "value": "lightning",   "weight": 8 },
+      { "value": "acid",        "weight": 6 },
+      { "value": "poison",      "weight": 6 },
+      { "value": "necrotic",    "weight": 7 },
+      { "value": "radiant",     "weight": 5 },
+      { "value": "psychic",     "weight": 4 },
+      { "value": "thunder",     "weight": 4 },
+      { "value": "force",       "weight": 3 }
+    ],
+    "has_reactions": {
+      "low":  [ { "value": true, "weight": 20 }, { "value": false, "weight": 80 } ],
+      "mid":  [ { "value": true, "weight": 40 }, { "value": false, "weight": 60 } ],
+      "high": [ { "value": true, "weight": 60 }, { "value": false, "weight": 40 } ],
+      "epic": [ { "value": true, "weight": 80 }, { "value": false, "weight": 20 } ]
+    },
+    "has_legendary_actions": {
+      "low":  [ { "value": true, "weight": 2 },  { "value": false, "weight": 98 } ],
+      "mid":  [ { "value": true, "weight": 15 }, { "value": false, "weight": 85 } ],
+      "high": [ { "value": true, "weight": 50 }, { "value": false, "weight": 50 } ],
+      "epic": [ { "value": true, "weight": 85 }, { "value": false, "weight": 15 } ]
+    },
+    "legendary_action_count": [
+      { "value": 2, "weight": 20 },
+      { "value": 3, "weight": 60 },
+      { "value": 4, "weight": 20 }
+    ],
+    "has_lair_actions": {
+      "low":  [ { "value": true, "weight": 1 },  { "value": false, "weight": 99 } ],
+      "mid":  [ { "value": true, "weight": 5 },  { "value": false, "weight": 95 } ],
+      "high": [ { "value": true, "weight": 20 }, { "value": false, "weight": 80 } ],
+      "epic": [ { "value": true, "weight": 50 }, { "value": false, "weight": 50 } ]
+    },
+    "has_legendary_resistance": {
+      "low":  [ { "value": 0, "weight": 98 }, { "value": 1, "weight": 2 } ],
+      "mid":  [ { "value": 0, "weight": 70 }, { "value": 1, "weight": 25 }, { "value": 2, "weight": 5 } ],
+      "high": [ { "value": 0, "weight": 30 }, { "value": 1, "weight": 40 }, { "value": 2, "weight": 20 }, { "value": 3, "weight": 10 } ],
+      "epic": [ { "value": 0, "weight": 5 },  { "value": 1, "weight": 20 }, { "value": 2, "weight": 35 }, { "value": 3, "weight": 40 } ]
+    },
+    "movement_types": {
+      "low":  [
+        { "value": ["walk"],                       "weight": 60 },
+        { "value": ["walk", "swim"],               "weight": 15 },
+        { "value": ["walk", "climb"],              "weight": 15 },
+        { "value": ["walk", "fly"],                "weight": 5 },
+        { "value": ["walk", "burrow"],             "weight": 5 }
+      ],
+      "mid":  [
+        { "value": ["walk"],                       "weight": 30 },
+        { "value": ["walk", "swim"],               "weight": 15 },
+        { "value": ["walk", "climb"],              "weight": 10 },
+        { "value": ["walk", "fly"],                "weight": 25 },
+        { "value": ["walk", "burrow"],             "weight": 10 },
+        { "value": ["walk", "fly", "swim"],        "weight": 5 },
+        { "value": ["fly"],                        "weight": 5 }
+      ],
+      "high": [
+        { "value": ["walk"],                       "weight": 15 },
+        { "value": ["walk", "fly"],                "weight": 35 },
+        { "value": ["walk", "swim", "fly"],        "weight": 20 },
+        { "value": ["walk", "burrow"],             "weight": 10 },
+        { "value": ["walk", "fly", "burrow"],      "weight": 10 },
+        { "value": ["fly"],                        "weight": 10 }
+      ],
+      "epic": [
+        { "value": ["walk", "fly"],                "weight": 30 },
+        { "value": ["walk", "fly", "swim"],        "weight": 25 },
+        { "value": ["walk", "fly", "burrow"],      "weight": 15 },
+        { "value": ["walk", "fly", "swim", "burrow"], "weight": 15 },
+        { "value": ["fly"],                        "weight": 15 }
+      ]
+    },
+    "senses": {
+      "low":  [
+        { "value": ["darkvision_60"],              "weight": 50 },
+        { "value": ["darkvision_120"],             "weight": 15 },
+        { "value": ["blindsight_10"],              "weight": 10 },
+        { "value": [],                             "weight": 25 }
+      ],
+      "mid":  [
+        { "value": ["darkvision_60"],              "weight": 30 },
+        { "value": ["darkvision_120"],             "weight": 25 },
+        { "value": ["blindsight_30"],              "weight": 20 },
+        { "value": ["darkvision_60", "blindsight_10"], "weight": 15 },
+        { "value": ["truesight_30"],               "weight": 10 }
+      ],
+      "high": [
+        { "value": ["darkvision_120"],             "weight": 25 },
+        { "value": ["blindsight_60"],              "weight": 20 },
+        { "value": ["truesight_60"],               "weight": 20 },
+        { "value": ["darkvision_120", "blindsight_30"], "weight": 20 },
+        { "value": ["truesight_120"],              "weight": 15 }
+      ],
+      "epic": [
+        { "value": ["truesight_120"],              "weight": 35 },
+        { "value": ["darkvision_120", "truesight_60"], "weight": 30 },
+        { "value": ["blindsight_120"],             "weight": 20 },
+        { "value": ["truesight_120", "blindsight_60"], "weight": 15 }
+      ]
+    },
+    "saving_throw_count": {
+      "low":  [
+        { "value": 0, "weight": 40 },
+        { "value": 1, "weight": 35 },
+        { "value": 2, "weight": 20 },
+        { "value": 3, "weight": 5 }
+      ],
+      "mid":  [
+        { "value": 0, "weight": 10 },
+        { "value": 1, "weight": 20 },
+        { "value": 2, "weight": 35 },
+        { "value": 3, "weight": 25 },
+        { "value": 4, "weight": 10 }
+      ],
+      "high": [
+        { "value": 2, "weight": 20 },
+        { "value": 3, "weight": 35 },
+        { "value": 4, "weight": 30 },
+        { "value": 5, "weight": 15 }
+      ],
+      "epic": [
+        { "value": 3, "weight": 20 },
+        { "value": 4, "weight": 35 },
+        { "value": 5, "weight": 30 },
+        { "value": 6, "weight": 15 }
+      ]
+    },
+    "skill_count": {
+      "low":  [
+        { "value": 0, "weight": 25 },
+        { "value": 1, "weight": 40 },
+        { "value": 2, "weight": 25 },
+        { "value": 3, "weight": 10 }
+      ],
+      "mid":  [
+        { "value": 0, "weight": 10 },
+        { "value": 1, "weight": 20 },
+        { "value": 2, "weight": 35 },
+        { "value": 3, "weight": 25 },
+        { "value": 4, "weight": 10 }
+      ],
+      "high": [
+        { "value": 2, "weight": 20 },
+        { "value": 3, "weight": 35 },
+        { "value": 4, "weight": 30 },
+        { "value": 5, "weight": 15 }
+      ],
+      "epic": [
+        { "value": 3, "weight": 20 },
+        { "value": 4, "weight": 35 },
+        { "value": 5, "weight": 30 },
+        { "value": 6, "weight": 15 }
+      ]
+    },
+    "trait_count": {
+      "low":  [
+        { "value": 1, "weight": 50 },
+        { "value": 2, "weight": 35 },
+        { "value": 3, "weight": 12 },
+        { "value": 4, "weight": 3 }
+      ],
+      "mid":  [
+        { "value": 1, "weight": 20 },
+        { "value": 2, "weight": 40 },
+        { "value": 3, "weight": 30 },
+        { "value": 4, "weight": 10 }
+      ],
+      "high": [
+        { "value": 2, "weight": 20 },
+        { "value": 3, "weight": 40 },
+        { "value": 4, "weight": 30 },
+        { "value": 5, "weight": 10 }
+      ],
+      "epic": [
+        { "value": 3, "weight": 20 },
+        { "value": 4, "weight": 35 },
+        { "value": 5, "weight": 30 },
+        { "value": 6, "weight": 15 }
+      ]
+    },
+    "condition_immunity_count": {
+      "low":  [
+        { "value": 0, "weight": 60 },
+        { "value": 1, "weight": 30 },
+        { "value": 2, "weight": 8 },
+        { "value": 3, "weight": 2 }
+      ],
+      "mid":  [
+        { "value": 0, "weight": 30 },
+        { "value": 1, "weight": 35 },
+        { "value": 2, "weight": 25 },
+        { "value": 3, "weight": 10 }
+      ],
+      "high": [
+        { "value": 0, "weight": 10 },
+        { "value": 1, "weight": 25 },
+        { "value": 2, "weight": 35 },
+        { "value": 3, "weight": 20 },
+        { "value": 4, "weight": 10 }
+      ],
+      "epic": [
+        { "value": 2, "weight": 15 },
+        { "value": 3, "weight": 30 },
+        { "value": 4, "weight": 35 },
+        { "value": 5, "weight": 20 }
+      ]
+    },
+    "damage_resistance_count": {
+      "low":  [
+        { "value": 0, "weight": 55 },
+        { "value": 1, "weight": 30 },
+        { "value": 2, "weight": 12 },
+        { "value": 3, "weight": 3 }
+      ],
+      "mid":  [
+        { "value": 0, "weight": 25 },
+        { "value": 1, "weight": 30 },
+        { "value": 2, "weight": 30 },
+        { "value": 3, "weight": 15 }
+      ],
+      "high": [
+        { "value": 0, "weight": 10 },
+        { "value": 1, "weight": 20 },
+        { "value": 2, "weight": 35 },
+        { "value": 3, "weight": 25 },
+        { "value": 4, "weight": 10 }
+      ],
+      "epic": [
+        { "value": 2, "weight": 15 },
+        { "value": 3, "weight": 30 },
+        { "value": 4, "weight": 35 },
+        { "value": 5, "weight": 20 }
+      ]
+    },
+    "damage_immunity_count": {
+      "low":  [
+        { "value": 0, "weight": 80 },
+        { "value": 1, "weight": 18 },
+        { "value": 2, "weight": 2 }
+      ],
+      "mid":  [
+        { "value": 0, "weight": 50 },
+        { "value": 1, "weight": 30 },
+        { "value": 2, "weight": 15 },
+        { "value": 3, "weight": 5 }
+      ],
+      "high": [
+        { "value": 0, "weight": 20 },
+        { "value": 1, "weight": 35 },
+        { "value": 2, "weight": 30 },
+        { "value": 3, "weight": 15 }
+      ],
+      "epic": [
+        { "value": 0, "weight": 5 },
+        { "value": 1, "weight": 20 },
+        { "value": 2, "weight": 35 },
+        { "value": 3, "weight": 30 },
+        { "value": 4, "weight": 10 }
+      ]
+    },
+    "action_count": {
+      "low":  [
+        { "value": 1, "weight": 50 },
+        { "value": 2, "weight": 35 },
+        { "value": 3, "weight": 12 },
+        { "value": 4, "weight": 3 }
+      ],
+      "mid":  [
+        { "value": 1, "weight": 15 },
+        { "value": 2, "weight": 40 },
+        { "value": 3, "weight": 35 },
+        { "value": 4, "weight": 10 }
+      ],
+      "high": [
+        { "value": 2, "weight": 15 },
+        { "value": 3, "weight": 40 },
+        { "value": 4, "weight": 35 },
+        { "value": 5, "weight": 10 }
+      ],
+      "epic": [
+        { "value": 3, "weight": 20 },
+        { "value": 4, "weight": 40 },
+        { "value": 5, "weight": 25 },
+        { "value": 6, "weight": 15 }
+      ]
+    },
+    "bonus_action_count": {
+      "low":  [
+        { "value": 0, "weight": 60 },
+        { "value": 1, "weight": 32 },
+        { "value": 2, "weight": 8 }
+      ],
+      "mid":  [
+        { "value": 0, "weight": 30 },
+        { "value": 1, "weight": 50 },
+        { "value": 2, "weight": 20 }
+      ],
+      "high": [
+        { "value": 0, "weight": 15 },
+        { "value": 1, "weight": 50 },
+        { "value": 2, "weight": 35 }
+      ],
+      "epic": [
+        { "value": 0, "weight": 5  },
+        { "value": 1, "weight": 40 },
+        { "value": 2, "weight": 40 },
+        { "value": 3, "weight": 15 }
+      ]
+    },
+    "spellcasting_type": {
+      "low":  [
+        { "value": "none",   "weight": 65 },
+        { "value": "innate", "weight": 25 },
+        { "value": "half",   "weight": 8 },
+        { "value": "full",   "weight": 2 }
+      ],
+      "mid":  [
+        { "value": "none",   "weight": 35 },
+        { "value": "innate", "weight": 35 },
+        { "value": "half",   "weight": 20 },
+        { "value": "full",   "weight": 10 }
+      ],
+      "high": [
+        { "value": "none",   "weight": 20 },
+        { "value": "innate", "weight": 30 },
+        { "value": "half",   "weight": 25 },
+        { "value": "full",   "weight": 25 }
+      ],
+      "epic": [
+        { "value": "none",   "weight": 10 },
+        { "value": "innate", "weight": 20 },
+        { "value": "half",   "weight": 25 },
+        { "value": "full",   "weight": 45 }
+      ]
+    },
+    "tier_boost": {
+      "_note": "Applied on top of the base CR-band roll. tier=1: shift toward higher-end values; tier=3: shift toward lower-end values. The script uses these multipliers on the top/bottom halves of each table.",
+      "1": { "top_half_multiplier": 2.5, "bottom_half_multiplier": 0.4 },
+      "2": { "top_half_multiplier": 1.0, "bottom_half_multiplier": 1.0 },
+      "3": { "top_half_multiplier": 0.4, "bottom_half_multiplier": 2.5 }
+    }
+  },
+
+  "item": {
+    "_note": "No CR. Tier modifies probability toward higher-rarity / more-complex options.",
+    "attunement_required": [
+      { "value": true,  "weight": 45 },
+      { "value": false, "weight": 55 }
+    ],
+    "charges": [
+      { "value": "none",  "weight": 35 },
+      { "value": "1d4",   "weight": 20 },
+      { "value": "1d6",   "weight": 20 },
+      { "value": "1d8",   "weight": 15 },
+      { "value": "1d10",  "weight": 10 }
+    ],
+    "recharge": [
+      { "value": "none",   "weight": 35 },
+      { "value": "dawn",   "weight": 35 },
+      { "value": "dusk",   "weight": 10 },
+      { "value": "weekly", "weight": 10 },
+      { "value": "on_roll","weight": 10 }
+    ],
+    "effect_type": {
+      "weapon": [
+        { "value": "offensive",   "weight": 55 },
+        { "value": "defensive",   "weight": 15 },
+        { "value": "utility",     "weight": 15 },
+        { "value": "social",      "weight": 5 },
+        { "value": "divination",  "weight": 5 },
+        { "value": "transport",   "weight": 5 }
+      ],
+      "armor": [
+        { "value": "defensive",   "weight": 55 },
+        { "value": "offensive",   "weight": 15 },
+        { "value": "utility",     "weight": 20 },
+        { "value": "social",      "weight": 5 },
+        { "value": "divination",  "weight": 5 }
+      ],
+      "wondrous": [
+        { "value": "utility",     "weight": 30 },
+        { "value": "offensive",   "weight": 20 },
+        { "value": "defensive",   "weight": 20 },
+        { "value": "social",      "weight": 15 },
+        { "value": "divination",  "weight": 10 },
+        { "value": "transport",   "weight": 5 }
+      ],
+      "consumable": [
+        { "value": "offensive",   "weight": 35 },
+        { "value": "defensive",   "weight": 30 },
+        { "value": "utility",     "weight": 25 },
+        { "value": "social",      "weight": 5 },
+        { "value": "divination",  "weight": 5 }
+      ],
+      "ring": [
+        { "value": "defensive",   "weight": 30 },
+        { "value": "utility",     "weight": 30 },
+        { "value": "offensive",   "weight": 20 },
+        { "value": "social",      "weight": 10 },
+        { "value": "divination",  "weight": 10 }
+      ],
+      "staff": [
+        { "value": "offensive",   "weight": 35 },
+        { "value": "utility",     "weight": 30 },
+        { "value": "defensive",   "weight": 20 },
+        { "value": "divination",  "weight": 10 },
+        { "value": "social",      "weight": 5 }
+      ],
+      "default": [
+        { "value": "offensive",   "weight": 25 },
+        { "value": "defensive",   "weight": 25 },
+        { "value": "utility",     "weight": 25 },
+        { "value": "social",      "weight": 10 },
+        { "value": "divination",  "weight": 10 },
+        { "value": "transport",   "weight": 5 }
+      ]
+    },
+    "activation": [
+      { "value": "passive",       "weight": 25 },
+      { "value": "action",        "weight": 35 },
+      { "value": "bonus_action",  "weight": 20 },
+      { "value": "reaction",      "weight": 10 },
+      { "value": "ritual",        "weight": 10 }
+    ],
+    "cursed": [
+      { "value": true,  "weight": 8 },
+      { "value": false, "weight": 92 }
+    ],
+    "sentient": [
+      { "value": true,  "weight": 3 },
+      { "value": false, "weight": 97 }
+    ],
+    "damage_bonus": {
+      "weapon": [
+        { "value": 0,    "weight": 30 },
+        { "value": 1,    "weight": 40 },
+        { "value": 2,    "weight": 20 },
+        { "value": 3,    "weight": 10 }
+      ],
+      "default": [
+        { "value": 0,    "weight": 100 }
+      ]
+    },
+    "has_unique_trait": [
+      { "value": true,  "weight": 60 },
+      { "value": false, "weight": 40 }
+    ],
+    "tier_boost": {
+      "1": { "top_half_multiplier": 2.0, "bottom_half_multiplier": 0.5 },
+      "2": { "top_half_multiplier": 1.0, "bottom_half_multiplier": 1.0 },
+      "3": { "top_half_multiplier": 0.5, "bottom_half_multiplier": 2.0 }
+    }
+  },
+
+  "spell": {
+    "_note": "Level-banded: cantrip=0, low=1-3, mid=4-6, high=7-9. Tier modifies complexity/power.",
+    "level_bands": {
+      "cantrip": [0, 0],
+      "low":     [1, 3],
+      "mid":     [4, 6],
+      "high":    [7, 9]
+    },
+    "school": [
+      { "value": "evocation",      "weight": 18 },
+      { "value": "conjuration",    "weight": 12 },
+      { "value": "illusion",       "weight": 10 },
+      { "value": "transmutation",  "weight": 12 },
+      { "value": "necromancy",     "weight": 10 },
+      { "value": "enchantment",    "weight": 10 },
+      { "value": "divination",     "weight": 10 },
+      { "value": "abjuration",     "weight": 10 },
+      { "value": "summoning",      "weight": 8 }
+    ],
+    "casting_time": {
+      "cantrip": [
+        { "value": "action",       "weight": 90 },
+        { "value": "bonus_action", "weight": 10 }
+      ],
+      "low": [
+        { "value": "action",       "weight": 60 },
+        { "value": "bonus_action", "weight": 20 },
+        { "value": "reaction",     "weight": 10 },
+        { "value": "1_minute",     "weight": 5 },
+        { "value": "ritual",       "weight": 5 }
+      ],
+      "mid": [
+        { "value": "action",       "weight": 55 },
+        { "value": "bonus_action", "weight": 15 },
+        { "value": "reaction",     "weight": 10 },
+        { "value": "1_minute",     "weight": 10 },
+        { "value": "ritual",       "weight": 10 }
+      ],
+      "high": [
+        { "value": "action",       "weight": 45 },
+        { "value": "bonus_action", "weight": 10 },
+        { "value": "reaction",     "weight": 10 },
+        { "value": "1_minute",     "weight": 20 },
+        { "value": "ritual",       "weight": 15 }
+      ]
+    },
+    "range": {
+      "cantrip": [
+        { "value": "self",    "weight": 20 },
+        { "value": "touch",   "weight": 10 },
+        { "value": "30ft",    "weight": 20 },
+        { "value": "60ft",    "weight": 30 },
+        { "value": "120ft",   "weight": 20 }
+      ],
+      "low": [
+        { "value": "self",    "weight": 15 },
+        { "value": "touch",   "weight": 15 },
+        { "value": "30ft",    "weight": 15 },
+        { "value": "60ft",    "weight": 25 },
+        { "value": "90ft",    "weight": 15 },
+        { "value": "120ft",   "weight": 15 }
+      ],
+      "mid": [
+        { "value": "self",    "weight": 20 },
+        { "value": "touch",   "weight": 10 },
+        { "value": "60ft",    "weight": 20 },
+        { "value": "90ft",    "weight": 20 },
+        { "value": "120ft",   "weight": 20 },
+        { "value": "300ft",   "weight": 10 }
+      ],
+      "high": [
+        { "value": "self",    "weight": 20 },
+        { "value": "touch",   "weight": 10 },
+        { "value": "120ft",   "weight": 25 },
+        { "value": "300ft",   "weight": 25 },
+        { "value": "unlimited","weight": 20 }
+      ]
+    },
+    "duration": {
+      "cantrip": [
+        { "value": "instantaneous",           "weight": 100 }
+      ],
+      "low": [
+        { "value": "instantaneous",           "weight": 35 },
+        { "value": "1_round",                 "weight": 10 },
+        { "value": "concentration_1min",      "weight": 30 },
+        { "value": "concentration_10min",     "weight": 10 },
+        { "value": "1_hour",                  "weight": 10 },
+        { "value": "8_hours",                 "weight": 5 }
+      ],
+      "mid": [
+        { "value": "instantaneous",           "weight": 20 },
+        { "value": "1_round",                 "weight": 10 },
+        { "value": "concentration_1min",      "weight": 25 },
+        { "value": "concentration_10min",     "weight": 15 },
+        { "value": "concentration_1hour",     "weight": 15 },
+        { "value": "8_hours",                 "weight": 10 },
+        { "value": "24_hours",                "weight": 5 }
+      ],
+      "high": [
+        { "value": "instantaneous",           "weight": 20 },
+        { "value": "concentration_10min",     "weight": 20 },
+        { "value": "concentration_1hour",     "weight": 20 },
+        { "value": "8_hours",                 "weight": 15 },
+        { "value": "24_hours",                "weight": 15 },
+        { "value": "permanent",               "weight": 10 }
+      ]
+    },
+    "components": [
+      { "value": "V_only",  "weight": 5  },
+      { "value": "VS",      "weight": 20 },
+      { "value": "VSM",     "weight": 55 },
+      { "value": "SM",      "weight": 10 },
+      { "value": "VM",      "weight": 10 }
+    ],
+    "aoe_type": {
+      "cantrip": [
+        { "value": "none",     "weight": 60 },
+        { "value": "cone",     "weight": 15 },
+        { "value": "line",     "weight": 15 },
+        { "value": "sphere",   "weight": 10 }
+      ],
+      "low": [
+        { "value": "none",     "weight": 45 },
+        { "value": "sphere",   "weight": 20 },
+        { "value": "cone",     "weight": 15 },
+        { "value": "line",     "weight": 10 },
+        { "value": "cube",     "weight": 10 }
+      ],
+      "mid": [
+        { "value": "none",     "weight": 30 },
+        { "value": "sphere",   "weight": 25 },
+        { "value": "cone",     "weight": 15 },
+        { "value": "line",     "weight": 10 },
+        { "value": "cube",     "weight": 10 },
+        { "value": "cylinder", "weight": 10 }
+      ],
+      "high": [
+        { "value": "none",     "weight": 20 },
+        { "value": "sphere",   "weight": 30 },
+        { "value": "cone",     "weight": 15 },
+        { "value": "cube",     "weight": 15 },
+        { "value": "cylinder", "weight": 10 },
+        { "value": "line",     "weight": 10 }
+      ]
+    },
+    "saving_throw": [
+      { "value": "none", "weight": 25 },
+      { "value": "STR",  "weight": 6 },
+      { "value": "DEX",  "weight": 16 },
+      { "value": "CON",  "weight": 12 },
+      { "value": "INT",  "weight": 8 },
+      { "value": "WIS",  "weight": 14 },
+      { "value": "CHA",  "weight": 10 },
+      { "value": "attack_roll", "weight": 9 }
+    ],
+    "damage_type": [
+      { "value": "none",        "weight": 20 },
+      { "value": "fire",        "weight": 12 },
+      { "value": "cold",        "weight": 9 },
+      { "value": "lightning",   "weight": 9 },
+      { "value": "acid",        "weight": 7 },
+      { "value": "poison",      "weight": 6 },
+      { "value": "necrotic",    "weight": 8 },
+      { "value": "radiant",     "weight": 8 },
+      { "value": "psychic",     "weight": 6 },
+      { "value": "thunder",     "weight": 6 },
+      { "value": "force",       "weight": 6 },
+      { "value": "bludgeoning", "weight": 3 }
+    ],
+    "upcast_scaling": [
+      { "value": true,  "weight": 55 },
+      { "value": false, "weight": 45 }
+    ],
+    "ritual_tag": [
+      { "value": true,  "weight": 12 },
+      { "value": false, "weight": 88 }
+    ],
+    "concentration": [
+      { "value": true,  "weight": 40 },
+      { "value": false, "weight": 60 }
+    ],
+    "target_type": [
+      { "value": "single_creature",   "weight": 35 },
+      { "value": "multiple_creatures","weight": 20 },
+      { "value": "area",              "weight": 20 },
+      { "value": "self",              "weight": 15 },
+      { "value": "object",            "weight": 10 }
+    ],
+    "tier_boost": {
+      "1": { "top_half_multiplier": 2.0, "bottom_half_multiplier": 0.5 },
+      "2": { "top_half_multiplier": 1.0, "bottom_half_multiplier": 1.0 },
+      "3": { "top_half_multiplier": 0.5, "bottom_half_multiplier": 2.0 }
+    }
+  },
+
+  "feat": {
+    "_note": "No level band. Tier modifies toward broader/more powerful benefits.",
+    "stat_increase": [
+      { "value": "none",            "weight": 25 },
+      { "value": "+1_choice",       "weight": 25 },
+      { "value": "+1_to_specific",  "weight": 20 },
+      { "value": "+2_to_specific",  "weight": 15 },
+      { "value": "ASI_plus_1",      "weight": 15 }
+    ],
+    "passive_benefit": [
+      { "value": true,  "weight": 70 },
+      { "value": false, "weight": 30 }
+    ],
+    "active_ability": [
+      { "value": true,  "weight": 55 },
+      { "value": false, "weight": 45 }
+    ],
+    "uses_per_rest": [
+      { "value": "none",  "weight": 30 },
+      { "value": "1",     "weight": 40 },
+      { "value": "2",     "weight": 20 },
+      { "value": "PB",    "weight": 10 }
+    ],
+    "recharge": [
+      { "value": "short_rest", "weight": 30 },
+      { "value": "long_rest",  "weight": 55 },
+      { "value": "dawn",       "weight": 15 }
+    ],
+    "skill_granted": [
+      { "value": "none",        "weight": 50 },
+      { "value": "proficiency", "weight": 35 },
+      { "value": "expertise",   "weight": 15 }
+    ],
+    "spell_granted": [
+      { "value": "none",     "weight": 55 },
+      { "value": "1_cantrip","weight": 25 },
+      { "value": "1_spell",  "weight": 20 }
+    ],
+    "condition_related": [
+      { "value": true,  "weight": 30 },
+      { "value": false, "weight": 70 }
+    ],
+    "saving_throw_bonus": [
+      { "value": "none",             "weight": 55 },
+      { "value": "+1",               "weight": 25 },
+      { "value": "advantage_on_type","weight": 20 }
+    ],
+    "tier_boost": {
+      "1": { "top_half_multiplier": 2.0, "bottom_half_multiplier": 0.5 },
+      "2": { "top_half_multiplier": 1.0, "bottom_half_multiplier": 1.0 },
+      "3": { "top_half_multiplier": 0.5, "bottom_half_multiplier": 2.0 }
+    }
+  },
+
+  "scenario": {
+    "_note": "No CR or level. Tier modifies toward more complex/dangerous scenarios.",
+    "location_type": [
+      { "value": "dungeon",    "weight": 20 },
+      { "value": "wilderness", "weight": 18 },
+      { "value": "urban",      "weight": 18 },
+      { "value": "aquatic",    "weight": 10 },
+      { "value": "planar",     "weight": 12 },
+      { "value": "underdark",  "weight": 12 },
+      { "value": "aerial",     "weight": 10 }
+    ],
+    "primary_threat": [
+      { "value": "combat",      "weight": 30 },
+      { "value": "social",      "weight": 20 },
+      { "value": "exploration", "weight": 20 },
+      { "value": "puzzle",      "weight": 10 },
+      { "value": "stealth",     "weight": 10 },
+      { "value": "survival",    "weight": 10 }
+    ],
+    "complication": [
+      { "value": "none",             "weight": 20 },
+      { "value": "trap",             "weight": 15 },
+      { "value": "time_pressure",    "weight": 15 },
+      { "value": "hostage",          "weight": 10 },
+      { "value": "rival_party",      "weight": 10 },
+      { "value": "betrayal",         "weight": 10 },
+      { "value": "shifting_terrain", "weight": 10 },
+      { "value": "environmental_hazard", "weight": 10 }
+    ],
+    "boss_present": [
+      { "value": true,  "weight": 65 },
+      { "value": false, "weight": 35 }
+    ],
+    "twist": [
+      { "value": "none",                "weight": 30 },
+      { "value": "ally_is_villain",     "weight": 15 },
+      { "value": "macguffin_is_cursed", "weight": 12 },
+      { "value": "location_is_alive",   "weight": 10 },
+      { "value": "reward_is_trap",      "weight": 10 },
+      { "value": "wrong_target",        "weight": 12 },
+      { "value": "duplicate_villain",   "weight": 11 }
+    ],
+    "scene_count": [
+      { "value": 2, "weight": 10 },
+      { "value": 3, "weight": 25 },
+      { "value": 4, "weight": 30 },
+      { "value": 5, "weight": 25 },
+      { "value": 6, "weight": 10 }
+    ],
+    "has_skill_challenge": [
+      { "value": true,  "weight": 40 },
+      { "value": false, "weight": 60 }
+    ],
+    "has_chase": [
+      { "value": true,  "weight": 20 },
+      { "value": false, "weight": 80 }
+    ],
+    "reward_type": [
+      { "value": "gold",           "weight": 25 },
+      { "value": "magic_item",     "weight": 20 },
+      { "value": "information",    "weight": 20 },
+      { "value": "faction_favor",  "weight": 15 },
+      { "value": "property",       "weight": 10 },
+      { "value": "none",           "weight": 10 }
+    ],
+    "factions_involved": [
+      { "value": 0, "weight": 20 },
+      { "value": 1, "weight": 40 },
+      { "value": 2, "weight": 25 },
+      { "value": 3, "weight": 15 }
+    ],
+    "npc_count": [
+      { "value": 1, "weight": 15 },
+      { "value": 2, "weight": 25 },
+      { "value": 3, "weight": 30 },
+      { "value": 4, "weight": 20 },
+      { "value": 5, "weight": 10 }
+    ],
+    "tier_boost": {
+      "1": { "top_half_multiplier": 2.0, "bottom_half_multiplier": 0.5 },
+      "2": { "top_half_multiplier": 1.0, "bottom_half_multiplier": 1.0 },
+      "3": { "top_half_multiplier": 0.5, "bottom_half_multiplier": 2.0 }
+    }
+  },
+
+  "shop": {
+    "_note": "Settlement and economy-tier jointly modify inventory quality and rare item availability. economy-tier: 1=prosperous, 2=average, 3=poor.",
+    "inventory_quality": {
+      "village": {
+        "1": [ { "value": "standard",    "weight": 50 }, { "value": "superior",   "weight": 30 }, { "value": "poor",       "weight": 15 }, { "value": "exceptional","weight": 5  } ],
+        "2": [ { "value": "poor",        "weight": 40 }, { "value": "standard",   "weight": 50 }, { "value": "superior",   "weight": 10 } ],
+        "3": [ { "value": "poor",        "weight": 70 }, { "value": "standard",   "weight": 28 }, { "value": "superior",   "weight": 2  } ]
+      },
+      "town": {
+        "1": [ { "value": "standard",    "weight": 30 }, { "value": "superior",   "weight": 45 }, { "value": "exceptional","weight": 20 }, { "value": "poor", "weight": 5 } ],
+        "2": [ { "value": "poor",        "weight": 15 }, { "value": "standard",   "weight": 50 }, { "value": "superior",   "weight": 30 }, { "value": "exceptional", "weight": 5 } ],
+        "3": [ { "value": "poor",        "weight": 50 }, { "value": "standard",   "weight": 40 }, { "value": "superior",   "weight": 10 } ]
+      },
+      "city": {
+        "1": [ { "value": "superior",    "weight": 35 }, { "value": "exceptional","weight": 45 }, { "value": "standard",   "weight": 20 } ],
+        "2": [ { "value": "standard",    "weight": 30 }, { "value": "superior",   "weight": 45 }, { "value": "exceptional","weight": 20 }, { "value": "poor", "weight": 5 } ],
+        "3": [ { "value": "poor",        "weight": 20 }, { "value": "standard",   "weight": 50 }, { "value": "superior",   "weight": 25 }, { "value": "exceptional", "weight": 5 } ]
+      }
+    },
+    "item_count": {
+      "village": {
+        "1": [ { "value": 6,  "weight": 20 }, { "value": 8,  "weight": 40 }, { "value": 10, "weight": 30 }, { "value": 12, "weight": 10 } ],
+        "2": [ { "value": 4,  "weight": 30 }, { "value": 6,  "weight": 50 }, { "value": 8,  "weight": 20 } ],
+        "3": [ { "value": 3,  "weight": 40 }, { "value": 4,  "weight": 40 }, { "value": 6,  "weight": 20 } ]
+      },
+      "town": {
+        "1": [ { "value": 10, "weight": 20 }, { "value": 14, "weight": 40 }, { "value": 18, "weight": 30 }, { "value": 20, "weight": 10 } ],
+        "2": [ { "value": 8,  "weight": 30 }, { "value": 10, "weight": 40 }, { "value": 14, "weight": 20 }, { "value": 16, "weight": 10 } ],
+        "3": [ { "value": 5,  "weight": 40 }, { "value": 8,  "weight": 40 }, { "value": 10, "weight": 20 } ]
+      },
+      "city": {
+        "1": [ { "value": 16, "weight": 20 }, { "value": 20, "weight": 40 }, { "value": 25, "weight": 30 }, { "value": 30, "weight": 10 } ],
+        "2": [ { "value": 12, "weight": 25 }, { "value": 16, "weight": 45 }, { "value": 20, "weight": 20 }, { "value": 25, "weight": 10 } ],
+        "3": [ { "value": 8,  "weight": 35 }, { "value": 12, "weight": 40 }, { "value": 16, "weight": 25 } ]
+      }
+    },
+    "has_rare_item": {
+      "village": {
+        "1": [ { "value": true, "weight": 15 }, { "value": false, "weight": 85 } ],
+        "2": [ { "value": true, "weight": 5  }, { "value": false, "weight": 95 } ],
+        "3": [ { "value": true, "weight": 2  }, { "value": false, "weight": 98 } ]
+      },
+      "town": {
+        "1": [ { "value": true, "weight": 40 }, { "value": false, "weight": 60 } ],
+        "2": [ { "value": true, "weight": 20 }, { "value": false, "weight": 80 } ],
+        "3": [ { "value": true, "weight": 8  }, { "value": false, "weight": 92 } ]
+      },
+      "city": {
+        "1": [ { "value": true, "weight": 75 }, { "value": false, "weight": 25 } ],
+        "2": [ { "value": true, "weight": 50 }, { "value": false, "weight": 50 } ],
+        "3": [ { "value": true, "weight": 25 }, { "value": false, "weight": 75 } ]
+      }
+    },
+    "haggling_mood": {
+      "weapons":   [ { "value": "hostile", "weight": 10 }, { "value": "neutral", "weight": 50 }, { "value": "friendly", "weight": 30 }, { "value": "enthusiastic", "weight": 10 } ],
+      "armor":     [ { "value": "hostile", "weight": 8  }, { "value": "neutral", "weight": 55 }, { "value": "friendly", "weight": 27 }, { "value": "enthusiastic", "weight": 10 } ],
+      "magic":     [ { "value": "hostile", "weight": 20 }, { "value": "neutral", "weight": 40 }, { "value": "friendly", "weight": 25 }, { "value": "enthusiastic", "weight": 15 } ],
+      "general":   [ { "value": "hostile", "weight": 5  }, { "value": "neutral", "weight": 40 }, { "value": "friendly", "weight": 40 }, { "value": "enthusiastic", "weight": 15 } ],
+      "curiosity": [ { "value": "hostile", "weight": 5  }, { "value": "neutral", "weight": 30 }, { "value": "friendly", "weight": 35 }, { "value": "enthusiastic", "weight": 30 } ],
+      "default":   [ { "value": "hostile", "weight": 10 }, { "value": "neutral", "weight": 40 }, { "value": "friendly", "weight": 35 }, { "value": "enthusiastic", "weight": 15 } ]
+    },
+    "special_service": [
+      { "value": "none",           "weight": 35 },
+      { "value": "appraisal",      "weight": 20 },
+      { "value": "custom_order",   "weight": 15 },
+      { "value": "black_market",   "weight": 8  },
+      { "value": "trade_in",       "weight": 15 },
+      { "value": "delivery",       "weight": 7  }
+    ],
+    "rumor_count": [
+      { "value": 0, "weight": 30 },
+      { "value": 1, "weight": 40 },
+      { "value": 2, "weight": 20 },
+      { "value": 3, "weight": 10 }
+    ],
+    "owner_attitude": [
+      { "value": "suspicious", "weight": 15 },
+      { "value": "neutral",    "weight": 40 },
+      { "value": "helpful",    "weight": 30 },
+      { "value": "talkative",  "weight": 15 }
+    ],
+    "shop_quirk": [
+      { "value": "none",                 "weight": 40 },
+      { "value": "cursed_stock",         "weight": 8  },
+      { "value": "stolen_goods",         "weight": 10 },
+      { "value": "guild_affiliated",     "weight": 15 },
+      { "value": "front_for_crime",      "weight": 7  },
+      { "value": "hidden_back_room",     "weight": 10 },
+      { "value": "enchanted_shopfront",  "weight": 10 }
+    ]
+  }
+}
