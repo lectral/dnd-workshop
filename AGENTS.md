@@ -59,6 +59,9 @@ Use for social NPCs, patrons, rivals, witnesses, faction contacts, and named vil
 ### `scenario-designer`
 Use for D&D scenarios, locations, heists, mysteries, site-based adventures, and scene writing. Compile a complete location/event scenario from the template. Default to English for narrative and mechanics.
 
+### `offsession-adventure-yaml`
+Use for Offsession app adventures written as branching YAML with scenes, exits, counters, inventory, gates, and stateful conditions. Default to repository-ready YAML output.
+
 ### `dnd-storymancer`
 Use when the user wants inspiration shaped by bibliomancy. Run:
 
@@ -94,20 +97,21 @@ Examples: `--generator statblock --cr 6 --tier 1` / `--generator shop --settleme
 
 ## Banned Writing Patterns
 
-These patterns are to be avoided in all outputs — conversational, creative, or mechanical. They signal low-quality, generic AI writing and must never appear.
+These patterns or their similiar alternatives are to be avoided in all outputs — conversational, creative, or mechanical. They signal low-quality, generic AI writing and must never appear.
 
 ### Forbidden Phrases & Constructions
-- "Navigate the complexities of..." / "Navigating the landscape of..."
-- "A testament to..."
-- "Intricate tapestry" / "vibrant landscape"
-- "A treasure trove of..."
-- "A plethora of..."
-- "Let's delve into..."
-- "It's important to note that..." / "It's essential to consider..."
-- "It wasn't just X, it was a Y." — the hollow contrastive construction
-- "Whether you're X or Y..."
-- "The best part? ..." / "The kicker? ..." — faux-casual contrasting questions
-- Excessive signposting: "Here's the key takeaway," "The most important thing is..."
+
+- "Navigation Metaphors" : These overused phrases artificially inflate the complexity of a topic without providing meaningful direction.
+- "Testament Cliché" : This construction offers a hollow way to attribute significance or proof without demonstrating the actual connection.
+- "Overwrought Imagery" : These flowery metaphors attempt to create depth but result in purple prose that distracts from the actual content.
+- "Treasure Trove Trope" : This hyperbolic cliché signals a lack of precise vocabulary when describing an abundant collection or resource.
+- "Plethora Padding" : This pretentious synonym for "many" adds unnecessary formality and syllables without contributing new meaning.
+- "Delve Intro" : This conversational filler acts as a generic transition mechanism characteristic of automated instructional tones.
+- "Empty Importance Signposting" : These phrases state the obvious regarding the relevance of information without explaining the specific significance.
+- "Hollow Contrast" : This dramatic sentence structure forces an elevation of concepts through comparison, often resulting in a formulaic feel.
+- "False Inclusivity" : This rhetorical device attempts to address a broad audience by listing hypothetical personas, often sounding reductionist or cheesy.
+- "Faux-Casual Question" : This stylistic tic attempts to manufacture engagement through feigned conversational curiosity, often breaking the writing flow.
+- "Excessive Signposting" : Overusing these structural markers demonstrates a lack of trust in the reader's ability to follow the narrative naturally.
 
 ### Banned Tones & Behaviors
 - **The Yes-Man Tone:** Affirming the user's framing without critical pushback when pushback is warranted.
@@ -135,6 +139,7 @@ Choose the narrowest skill that matches the user request.
 - Need a spell, spell rewrite, or ritual: use `spell-designer`.
 - Need a roleplay-forward cast member: use `npc-designer`.
 - Need a location, event, or phased adventure document: use `scenario-designer`.
+- Need a branching adventure file for an Offsession app: use `offsession-adventure-yaml`.
 - Need unexpected inspiration from books: use `dnd-storymancer`.
 - Need omen-driven inspiration from the D&D Tarot deck: use `dnd-tarot-reader`.
 - Need to create or standardize a repository-local skill: use `skill-builder`.

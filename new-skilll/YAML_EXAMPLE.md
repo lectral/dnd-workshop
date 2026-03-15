@@ -1,0 +1,627 @@
+# ==========================================
+# THE FORGOTTEN CITADEL
+# ==========================================
+meta:
+  title: "The Forgotten Citadel"
+  description: "An ancient citadel holds secrets and dangers beyond imagination."
+  theme: "gilded-relic"
+  one_shot: true
+
+# ==========================================
+# COUNTERS (Hidden Logic State)
+# ==========================================
+counters:
+  guard_alerted:
+    type: "number"
+    default: 0
+  found_secret:
+    type: "number"
+    default: 0
+  treasure_collected:
+    type: "number"
+    default: 0
+
+# ==========================================
+# INVENTORY (Visible Player Assets)
+# ==========================================
+inventory:
+  gold_coin:
+    name: "Gold"
+    description: "Shiny gold coins found throughout the citadel."
+    type: "currency"
+    default: 25
+
+  torch:
+    name: "Torch"
+    description: "Illuminates dark passages. Limited uses."
+    type: "item"
+    default: 1
+
+  ancient_key:
+    name: "Ancient Key"
+    description: "An ornate key with mysterious engravings."
+    type: "item"
+
+  healing_potion:
+    name: "Healing Potion"
+    description: "Restores health in dire situations."
+    type: "item"
+
+  citadel_map:
+    name: "Citadel Map"
+    description: "A worn map showing secret ledges, hidden stairs, and smuggler routes."
+    type: "item"
+
+  lucky_charm:
+    name: "Lucky Charm"
+    description: "Reroll a failed check."
+    type: "reroll"
+    default: 2
+
+  scouts_focus:
+    name: "Scout's Focus"
+    description: "Add +2 before a roll after studying the guard routes."
+    type: "bonus"
+    value: "2"
+    bonus_timing: "before"
+
+  warriors_blessing:
+    name: "Warrior's Blessing"
+    description: "Add +5 to your roll."
+    type: "bonus"
+    value: "5"
+    bonus_timing: "both"
+    default: 2
+
+  fate_bead:
+    name: "Fate Bead"
+    description: "Add +4 after seeing the outcome of a roll."
+    type: "bonus"
+    value: "4"
+    bonus_timing: "after"
+
+# ==========================================
+# SCENES
+# ==========================================
+scenes:
+  - id: start
+    title: "The Gates of Yore"
+    description: |
+      You stand before the towering gates of the Forgotten Citadel. Ancient stone walls rise high into the mist, their surfaces covered in moss and mysterious runes. The iron gates hang partially open, creaking ominously in the wind.
+
+      Two paths lie before you: the main entrance, or a narrow crack in the wall to the east that might allow for a stealthy approach.
+    exits:
+      - text: "Enter through the main gates"
+        target: courtyard
+
+      - text: "Squeeze through the crack"
+        gate:
+          text: "The crack is tight. Roll Dexterity to squeeze through."
+          short_text: "Dexterity"
+          show_short: true
+          dc: 10
+          failure_target: stuck
+        target: garden
+
+      - text: "Search for another way"
+        visible_if:
+          counter: found_secret
+          equals: 0
+        effects:
+          set_counter:
+            found_secret: 1
+        gate:
+          text: "You carefully examine the walls for hidden passages. Roll Investigation."
+          short_text: "Investigation"
+          show_short: true
+          dc: 14
+          failure_target: courtyard
+        target: secret_passage
+        one_time: true
+
+  - id: courtyard
+    title: "The Central Courtyard"
+    description: |
+      The courtyard stretches before you, once a place of beauty now reduced to ruin. A dried fountain stands in the center, its statue headless and weathered. Stone benches line the perimeter, and ancient tapestries hang tattered from the walls.
+
+      To the north, a grand doorway leads deeper into the citadel. To the west, you see what appears to be a guard tower. An old well sits in the corner, its depths shrouded in darkness.
+    exits:
+      - text: "Enter the main hall"
+        target: main_hall
+
+      - text: "Investigate the guard tower"
+        target: guard_tower
+
+      - text: "Climb down the well"
+        gate:
+          text: "The well is deep and slippery. Roll Athletics to climb down safely."
+          short_text: "Athletics"
+          show_short: true
+          dc: 12
+          failure_target: well_fallen
+        target: underground
+
+      - text: "Rest at the fountain"
+        target: courtyard_rest
+
+      - text: "Inspect the fountain's false bottom"
+        target: fountain_cache
+        visible_if:
+          counter: treasure_collected
+          equals: 0
+        one_time: true
+        color: gold
+
+  - id: garden
+    title: "The Overgrown Garden"
+    description: |
+      You emerge into what was once a magnificent garden. Thorny vines have overgrown everything, and strange luminescent flowers cast an eerie glow. In the center, you spot an ancient pedestal holding a glowing orb.
+
+      A crumbling gazebo offers shelter, and you notice fresh footprints leading toward a hidden door in the garden wall.
+    exits:
+      - text: "Take the glowing orb"
+        gate:
+          text: "As you reach for the orb, vines lash out! Roll Dexterity to dodge."
+          short_text: "Dexterity"
+          show_short: true
+          dc: 13
+          failure_target: garden_trapped
+        target: garden_orb
+        one_time: true
+
+      - text: "Follow the footprints"
+        visible_if:
+          counter: guard_alerted
+          less_than: 1
+        target: secret_passage
+
+      - text: "Search the gazebo"
+        target: gazebo
+
+  - id: secret_passage
+    title: "The Hidden Corridor"
+    description: |
+      You discover a hidden corridor behind the walls, used by the citadel's former inhabitants for secret movements. Torches line the walls, still burning with an unnatural blue flame.
+
+      The passage splits ahead: one path leads upward toward what must be the treasury, while another descends into the citadel's depths. You hear the faint sound of running water from below.
+    exits:
+      - text: "Ascend to the treasury"
+        gate:
+          text: "The stairs are trapped! Roll Perception to spot the pressure plates."
+          short_text: "Perception"
+          show_short: true
+          dc: 15
+          failure_target: treasury_trapped
+        target: treasury
+        one_time: true
+
+      - text: "Descend to the depths"
+        target: underground
+
+      - text: "Return to the courtyard"
+        target: courtyard
+
+  - id: main_hall
+    title: "The Grand Hall"
+    description: |
+      The grand hall takes your breath away. Vaulted ceilings disappear into shadow, and massive pillars carved with ancient stories line the room. A faded red carpet leads to an ornate throne at the far end.
+
+      Dust-covered chandeliers hang precariously overhead. To your left, a door marked with royal insignia beckons, while to your right, you hear distant chanting from behind a heavy oak door.
+    exits:
+      - text: "Approach the throne"
+        gate:
+          text: "The throne is warded! Roll Wisdom to sense the magical trap."
+          short_text: "Wisdom"
+          show_short: true
+          dc: 14
+          failure_target: throne_trapped
+        target: throne_room
+        one_time: true
+
+      - text: "Enter the royal chambers"
+        requires_item:
+          id: ancient_key
+          amount: 1
+        target: royal_chambers
+
+      - text: "Investigate the chanting"
+        target: ritual_room
+
+  - id: treasury
+    title: "The Ancient Treasury"
+    description: |
+      Gold coins and precious gems scatter across the floor. Ancient weapons line the walls, and mysterious artifacts rest on velvet cushions. In the center, a magnificent crown sits upon a pedestal, radiating power.
+
+      This is what you came for. But something feels wrong... the shadows seem to move of their own accord.
+    exits:
+      - text: "Take the crown"
+        color: gold
+        gate:
+          text: "The crown is protected by a spectral guardian! Roll Constitution to withstand its presence."
+          short_text: "Constitution"
+          show_short: true
+          dc: 16
+          failure_target: treasury_defeat
+        target: victory
+
+      - text: "Collect what you can carry"
+        target: escape_rich
+
+      - text: "Leave before trouble finds you"
+        color: cyan
+        target: secret_passage
+
+  - id: victory
+    title: "VICTORY - Ruler of the Citadel"
+    description: |
+      The crown accepts you as the new ruler of the Forgotten Citadel. Power flows through you as the ancient magics recognize their new master.
+
+      The spectral guardians bow in submission. The citadel's secrets are now yours to command. You have achieved the ultimate prize and lived to tell the tale.
+
+      **Congratulations, adventurer! You have conquered the Forgotten Citadel!**
+    exits: []
+
+  - id: stuck
+    title: "Wedged in the Wall"
+    description: |
+      You're stuck! The crack was narrower than it appeared. After several embarrassing minutes of wiggling, you finally push through, but your clothes are torn and you've made quite a racket.
+
+      Someone—or something—may have heard you...
+    exits:
+      - text: "Continue carefully"
+        target: garden
+
+  - id: well_fallen
+    title: "The Dark Depths"
+    description: |
+      You slip and tumble down the well! The fall is painful but not fatal. You land in shallow water, bruised but alive.
+
+      Bioluminescent fungi light your surroundings. You appear to be in an underground river system. A tunnel leads away into darkness, and you can see a rusty ladder leading back up.
+    exits:
+      - text: "Climb back up"
+        gate:
+          text: "The ladder is old and rusty. Roll Strength to climb up."
+          short_text: "Strength"
+          show_short: true
+          dc: 11
+          failure_target: well_fallen
+        target: courtyard
+
+      - text: "Explore the tunnel"
+        target: underground
+
+  - id: underground
+    title: "The Underground River"
+    description: |
+      An underground river flows through carved stone channels. Ancient bridges cross the dark water, and you can see distant lights flickering in caves along the banks.
+
+      The air is damp and cold. You notice small boats moored along the shore, and a narrow path leads deeper into the cavern system.
+    exits:
+      - text: "Take a boat downstream"
+        target: treasure_cave
+
+      - text: "Follow the map to a smugglers' ledge"
+        target: hidden_ledge
+        visible_if:
+          item: citadel_map
+          has_item: true
+        color: cyan
+
+      - text: "Pay the ferryman's tithe"
+        target: treasure_cave
+        visible_if:
+          currency: gold_coin
+          greater_or_equal: 30
+        effects:
+          add_currency:
+            gold_coin: -30
+        color: yellow
+
+      - text: "Follow the path"
+        target: ritual_room
+
+      - text: "Climb back to the surface"
+        target: courtyard
+
+  - id: treasure_cave
+    title: "The Hidden Cache"
+    description: |
+      Your boat drifts into a small cave filled with old chests and scattered coins. This appears to be a smuggler's cache or perhaps a forgotten treasury vault.
+
+      Most chests are empty, but one remains sealed with an intricate lock. Strange symbols glow faintly on its surface.
+    exits:
+      - text: "Force the chest open"
+        gate:
+          text: "The chest is trapped! Roll Dexterity to avoid the poison needle."
+          short_text: "Dexterity"
+          show_short: true
+          dc: 12
+          failure_target: chest_trapped
+        target: chest_open
+        one_time: true
+
+      - text: "Return to the river"
+        target: underground
+
+  # Additional scenes for failures and side paths
+  - id: guard_tower
+    title: "The Old Guard Tower"
+    description: |
+      The guard tower offers a commanding view of the citadel grounds. Ancient weapons rust in their racks, and a tattered banner hangs from the wall.
+
+      In a corner, you find an old guard's journal describing a secret treasury accessed through the main hall.
+    add_items:
+      - id: scouts_focus
+        amount: 1
+        text: "You study the patrol notes and gain Scout's Focus (+2 before a roll)."
+    exits:
+      - text: "Return to the courtyard"
+        target: courtyard
+
+  - id: courtyard_rest
+    title: "A Moment's Rest"
+    description: |
+      You rest by the dried fountain, taking in the melancholy beauty of the ruined courtyard. Your wounds begin to heal, and you feel slightly rejuvenated.
+
+      The peaceful moment is interrupted by the distant sound of stone grinding on stone...
+    exits:
+      - text: "Investigate the sound"
+        target: main_hall
+
+      - text: "Stay alert and rest more"
+        target: courtyard
+
+  - id: fountain_cache
+    title: "The Fountain Cache"
+    description: |
+      Beneath the cracked basin you uncover a waterproof coffer, untouched by time. Inside are neatly wrapped coins and a small talisman once carried by a nervous court messenger.
+
+      Whoever hid this intended to flee in a hurry and never made it back.
+    add_items:
+      - id: gold_coin
+        amount: 15
+        text: "You pocket 15 gold coins from the hidden cache."
+      - id: lucky_charm
+        amount: 1
+        text: "You recover a Lucky Charm that can fuel a reroll."
+    exits:
+      - text: "Slip back to the courtyard"
+        target: courtyard
+
+  - id: garden_trapped
+    title: "Ensnared by Vines"
+    description: |
+      The vines wrap around your arm, thorns digging into your flesh! You struggle against the magical vegetation, finally breaking free but not without cost.
+
+      Your arm throbs with pain, and you notice the vines have left a strange mark on your skin—a map perhaps?
+    remove_items:
+      - id: torch
+        amount: 1
+        text: "Your torch is crushed and snuffed out in the struggle."
+    exits:
+      - text: "Study the mark"
+        target: garden_orb
+
+      - text: "Ignore it and continue"
+        target: gazebo
+
+  - id: garden_orb
+    title: "The Orb's Power"
+    description: |
+      The orb pulses with ancient energy as you hold it. Visions of the citadel's golden age flash through your mind, and you see the location of the treasury clearly now.
+
+      The orb crumbles to dust after sharing its secrets, but you know exactly where to go.
+    exits:
+      - text: "Head to the treasury"
+        target: secret_passage
+
+      - text: "Continue exploring"
+        target: gazebo
+
+  - id: gazebo
+    title: "The Crumbling Gazebo"
+    description: |
+      The gazebo offers shelter from the eerie garden. Inside, you find old cushions and a small chest containing supplies left by previous explorers.
+
+      Among the supplies, you discover a healing potion and a worn map of the citadel.
+    add_items:
+      - id: healing_potion
+        amount: 1
+        text: "You take a healing potion from the supply chest."
+      - id: citadel_map
+        amount: 1
+        text: "You unfold a Citadel Map marked with a smugglers' ledge."
+      - id: ancient_key
+        amount: 1
+        text: "A velvet pouch hides an Ancient Key."
+    exits:
+      - text: "Take the supplies"
+        target: garden
+
+      - text: "Follow the map to the secret passage"
+        target: secret_passage
+
+  - id: treasury_trapped
+    title: "A Painful Lesson"
+    description: |
+      You trigger a pressure plate! Poison darts fly from the walls, and several find their mark. You stumble backward, weakened but alive.
+
+      The passage ahead remains, but you'll need to be more careful.
+    exits:
+      - text: "Try again, more carefully"
+        gate:
+          text: "You attempt to spot the remaining traps. Roll Investigation."
+          short_text: "Investigation"
+          show_short: true
+          dc: 13
+          failure_target: treasury_trapped
+        target: treasury
+
+      - text: "Go back"
+        target: secret_passage
+
+  - id: throne_trapped
+    title: "The Throne's Wrath"
+    description: |
+      The throne erupts with arcane energy! You're thrown backward, the magical wards rejecting your presence.
+
+      As you recover, you notice the magic has revealed a hidden compartment in the throne's base.
+    add_items:
+      - id: warriors_blessing
+        amount: 1
+        text: "A battle-prayer etched into the compartment grants you a Warrior's Blessing (+5)."
+    exits:
+      - text: "Check the compartment"
+        target: royal_chambers
+
+      - text: "Try a different approach"
+        target: main_hall
+
+  - id: throne_room
+    title: "The Throne's Secret"
+    description: |
+      You sense the ancient wards and step carefully around them. The throne itself is a masterwork of ancient craftsmanship, and behind it, you find a hidden lever.
+
+      The lever reveals a passage leading directly to what must be the royal treasury.
+    exits:
+      - text: "Enter the treasury"
+        target: treasury
+
+      - text: "Search the throne room"
+        target: royal_chambers
+
+  - id: royal_chambers
+    title: "The Royal Chambers"
+    description: |
+      Luxurious tapestries and fine furniture fill this room, remarkably preserved. A four-poster bed dominates one wall, and a writing desk sits by the window.
+
+      In a drawer, you find the royal seal and several ancient coins. A secret door in the wardrobe leads to a private treasury.
+    exits:
+      - text: "Enter the private treasury"
+        target: treasury
+
+      - text: "Return to the main hall"
+        target: main_hall
+
+  - id: ritual_room
+    title: "The Ritual Chamber"
+    description: |
+      Dark candles burn in a circle around an ancient altar. Strange symbols cover the floor, and you can feel the air thrumming with magical energy.
+
+      A robed figure stands at the altar, chanting in an unknown tongue. They haven't noticed you yet.
+    exits:
+      - text: "Attack the figure"
+        color: red
+        gate:
+          text: "You charge forward! Roll Initiative (Dexterity)."
+          short_text: "Initiative"
+          show_short: true
+          dc: 14
+          failure_target: ritual_fight
+        target: ritual_victory
+
+      - text: "Sneak past"
+        gate:
+          text: "You try to slip by unnoticed. Roll Stealth."
+          short_text: "Stealth"
+          show_short: true
+          dc: 15
+          failure_target: ritual_fight
+        target: secret_passage
+
+      - text: "Retreat quietly"
+        target: main_hall
+
+  - id: ritual_fight
+    title: "Battle in the Chamber"
+    description: |
+      The figure spins around, revealing a skeletal face beneath the hood! The undead cultist raises a dagger dripping with dark ichor.
+
+      After a fierce battle, you emerge victorious, but not unscathed. The ritual has been interrupted, and the magical energy dissipates.
+    exits:
+      - text: "Search the chamber"
+        target: ritual_victory
+
+      - text: "Flee the scene"
+        target: secret_passage
+
+  - id: ritual_victory
+    title: "The Cultist's Hoard"
+    description: |
+      Among the cultist's belongings, you find valuable gems and a strange amulet that seems to pulse with protective magic.
+
+      A passage behind the altar leads to an underground river, while another door leads back to the citadel proper.
+    add_items:
+      - id: fate_bead
+        amount: 1
+        text: "You claim a Fate Bead that can add +4 after a roll is revealed."
+    exits:
+      - text: "Take the underground passage"
+        target: underground
+
+      - text: "Return to the main hall"
+        target: main_hall
+
+  - id: chest_open
+    title: "Treasure Found!"
+    description: |
+      The chest opens to reveal a fortune in ancient coins and a beautifully crafted sword. This cache alone would make your journey worthwhile.
+
+      But something tells you greater treasures lie deeper in the citadel.
+    exits:
+      - text: "Continue exploring"
+        target: underground
+
+  - id: chest_trapped
+    title: "Poisoned!"
+    description: |
+      A needle pricks your finger, and you feel the poison burning through your veins. You manage to break the lock and open the chest, taking what you can before the poison takes effect.
+
+      You'll need to find healing soon.
+    exits:
+      - text: "Seek healing"
+        target: underground
+
+  - id: hidden_ledge
+    title: "The Smuggler's Ledge"
+    description: |
+      The map guides you to a narrow ledge above the river where smugglers once hauled contraband through a crack in the stone. A rotted pulley, a few old crates, and a leather purse remain.
+
+      From here you can lower yourself into the treasure cave or retreat before the footing gives way.
+    add_items:
+      - id: gold_coin
+        amount: 10
+        text: "You recover 10 gold coins from a smuggler's purse."
+    exits:
+      - text: "Climb down to the treasure cave"
+        target: treasure_cave
+
+      - text: "Retreat to the river path"
+        target: underground
+
+  - id: escape_rich
+    title: "A Fortune Escaped"
+    description: |
+      You stuff your pockets with gold and gems, deciding to leave the more dangerous treasures behind. A wise choice—for now.
+
+      As you exit the treasury, you feel the citadel's eyes upon you. Perhaps one day you'll return to claim what remains.
+    exits: []
+
+  - id: treasury_defeat
+    title: "The Spectral Guardian"
+    description: |
+      The spectral guardian overwhelms you with its presence! You're forced to retreat, but the experience has taught you much about the citadel's defenses.
+
+      Perhaps you need more preparation before facing such powerful guardians again.
+    exits:
+      - text: "Retreat to reconsider"
+        target: secret_passage
+
+      - text: "Try again with determination"
+        gate:
+          text: "You steel yourself against the guardian. Roll Constitution with advantage."
+          short_text: "Constitution"
+          show_short: true
+          dc: 14
+          failure_target: treasury_defeat
+        target: victory
